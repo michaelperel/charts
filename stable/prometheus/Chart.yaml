@@ -11,6 +11,11 @@ sources:
   - https://github.com/prometheus/pushgateway
   - https://github.com/prometheus/node_exporter
   - https://github.com/kubernetes/kube-state-metrics
+dependencies:
+  - name: kube-state-metrics
+    version: "2.7.*"
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    condition: kubeStateMetrics.enabled
 maintainers:
   - name: gianrubio
     email: gianrubio@gmail.com
